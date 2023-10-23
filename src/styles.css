@@ -1,0 +1,194 @@
+/* NavBar: */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    margin: 1rem;
+    text-align: center;
+}
+
+.nav {
+    background-color: #ad80d6;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.site-title {
+    font-size: 2rem;
+}
+
+.nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav a {
+    color: inherit;
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.nav li.active {
+    background-color: #555;
+}
+
+.nav li:hover {
+    background-color: #777;
+}
+
+/* Quiz Styling: */
+.question-card {
+    margin: 0;
+
+    background-color: rgb(157, 201, 243);
+    padding: 16px;
+    border-radius: 16px;
+    color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    background-color: rgb(87, 87, 87);
+    padding: 16px;
+    border: 3px solid white;
+    border-radius: 20px;
+    font-size: 20px;
+    margin-top: 8px;
+}
+
+.question-text {
+    color: black;
+    font-size: 30px;
+}
+
+.final-results{
+    margin: 0;
+
+    text-align: center;
+    background-color: gray;
+    padding: 16px;
+    border-radius: 16px;
+    color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.restart-button {
+
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+    border-radius: 24px;
+}
+
+/* Review Styling: */
+.review-card {
+    text-align: center;
+}
+
+.Review {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-image: url(data:image/jpeg;base64,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)
+  }
+
+  .addReview {
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .list {
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+    flex-direction: column;
+  }
+
+  .comment {
+    width: 500px;
+    height: 50px;
+    display: flex;
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .comment button {
+    width: auto;
+    height: 20px;
+    margin-left: 5px;
+    text-align: center;
+  }
+
+  input {
+    width: 300px;
+    height: 100px;
+  }
+
+  button {
+    height: 25px;
+    border-radius: 10%;
+  }
+
+h1 {
+    text-align: center;
+}
+
+/* about style */
+
+.message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid black;
+    background-color: white;
+}
+
+.links {
+    border: 5px solid black;
+    background-color: white;
+    width: fit-content;
+    text-align: center;
+
+}
